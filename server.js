@@ -5,7 +5,7 @@ var path = require('path');
 
 var app = express();
 
-
+var port = process.env.PORT || 3000;
 app.set('view engine', 'pug');
 
 app.get('/', function (req, res){
@@ -53,4 +53,4 @@ app.get('/*', function (req, res){
   res.send(resO);
   });
 
-app.listen(3000);
+app.listen(port);
